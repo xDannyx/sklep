@@ -49,31 +49,32 @@
 					</div>							
 				</div>
 
-				<div class="header_container">				
+				<div class="header_container">
+						
 					<div class="container">
 						<div class="row">
 							<div class="col">
 								<div class="header_content d-flex flex-row align-items-center justify-content-start">
-									<div class="logo"><a href="index.php">projektfarby</a></div>
+									<div class="logo"><a href="index">projektfarby</a></div>
 									<nav class="main_nav">
 										<ul>
-											<li><a href="index.php">Home</a></li>
+											<li><a href="index">Home</a></li>
 											<li class="hassubs">
-												<a href="kategorie.php">Kategorie</a>
+												<a href="kategorie">Kategorie</a>
 												<ul>
-													<li><a href="farby.php">Farby do ścian i sufitow</a></li>
-													<li><a href="drewno.php">Środki do drewna</a></li>
-													<li><a href="podloze.php">Przygotowanie podłoża</a></li>
-													<li><a href="akcesoria.php">Pędzle i akcesoria malarskie</a></li>
+													<li><a href="farby">Farby do ścian i sufitow</a></li>
+													<li><a href="drewno">Środki do drewna</a></li>
+													<li><a href="podloze">Przygotowanie podłoża</a></li>
+													<li><a href="akcesoria">Pędzle i akcesoria malarskie</a></li>
 												</ul>
 											</li>
 											<li><a href="#">O firmie</a></li>
-											<li><a href="kontakt.php">Kontakt</a></li>
+											<li><a href="kontakt">Kontakt</a></li>
 										</ul>
 									</nav>
 									<div class="header_extra ml-auto">
 										<div class="shopping_cart">
-											<a href="koszyk.php">
+											<a href="koszyk">
 												<div>Koszyk <span>(0)</span></div>
 											</a>
 										</div>
@@ -84,7 +85,6 @@
 								</div>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 			</header>
