@@ -40,7 +40,7 @@
 														<button type="button" class="btn cancel" onclick="closeForm()">Zamknij</button>
 													</form>
 												 </div>
-											<li><a href="index.html">Rejestracja <i class="fa fa-users"></i></a></li>
+											<li><a href="index.php">Rejestracja <i class="fa fa-users"></i></a></li>
 										</li>
 									</ul>
 								</nav>
@@ -54,26 +54,26 @@
 						<div class="row">
 							<div class="col">
 								<div class="header_content d-flex flex-row align-items-center justify-content-start">
-									<div class="logo"><a href="index.html">projektfarby</a></div>
+									<div class="logo"><a href="index.php">projektfarby</a></div>
 									<nav class="main_nav">
 										<ul>
-											<li><a href="index.html">Home</a></li>
+											<li><a href="index.php">Home</a></li>
 											<li class="hassubs">
-												<a href="kategorie.html">Kategorie</a>
+												<a href="kategorie.php">Kategorie</a>
 												<ul>
-													<li><a href="farby.html">Farby do ścian i sufitow</a></li>
-													<li><a href="drewno.html">Środki do drewna</a></li>
-													<li><a href="podloze.html">Przygotowanie podłoża</a></li>
-													<li><a href="akcesoria.html">Pędzle i akcesoria malarskie</a></li>
+													<li><a href="farby.php">Farby do ścian i sufitow</a></li>
+													<li><a href="drewno.php">Środki do drewna</a></li>
+													<li><a href="podloze.php">Przygotowanie podłoża</a></li>
+													<li><a href="akcesoria.php">Pędzle i akcesoria malarskie</a></li>
 												</ul>
 											</li>
 											<li><a href="#">O firmie</a></li>
-											<li><a href="kontakt.html">Kontakt</a></li>
+											<li><a href="kontakt.php">Kontakt</a></li>
 										</ul>
 									</nav>
 									<div class="header_extra ml-auto">
 										<div class="shopping_cart">
-											<a href="koszyk.html">
+											<a href="koszyk.php">
 												<div>Koszyk <span>(0)</span></div>
 											</a>
 										</div>
@@ -177,7 +177,13 @@
 
 													Aenean vitae posuere enim, sit amet rutrum sem. Sed tempus pellentesque leo, sit amet lacinia nibh varius vel. Pellentesque rhoncus volutpat nunc nec accumsan. Curabitur ut sapien eget orci volutpat maximus eu ac elit. Nam ac semper quam. Vivamus eu tincidunt nulla. Nulla placerat a dui et cursus.
 													
-													Proin facilisis tortor erat, non eleifend nisi aliquam sed. Donec non finibus arcu, sed tincidunt elit. Phasellus at placerat quam. Duis dictum finibus ultricies. Morbi vitae luctus mi, id luctus sapien. Aliquam erat volutpat. Quisque ut libero lacinia, pulvinar tortor quis, ultrices massa. Pellentesque vitae massa sit amet sem euismod ornare quis eu odio. Suspendisse iaculis tincidunt diam, commodo sollicitudin tellus. Nam consequat odio urna, eu dapibus ligula hendrerit sed. Proin porttitor rhoncus turpis, pulvinar malesuada arcu dictum vitae. Sed quam quam, lacinia sed malesuada ac, aliquet non tortor.</div>
+													Proin facilisis tortor erat, non eleifend nisi aliquam sed. Donec non finibus arcu, sed tincidunt elit. Phasellus at placerat quam. Duis dictum finibus ultricies. Morbi vitae luctus mi, id luctus sapien. Aliquam erat volutpat. Quisque ut libero lacinia, pulvinar tortor quis, ultrices massa. Pellentesque vitae massa sit amet sem euismod ornare quis eu odio. Suspendisse iaculis tincidunt diam, commodo sollicitudin tellus. Nam consequat odio urna, eu dapibus ligula hendrerit sed. Proin porttitor rhoncus turpis, pulvinar malesuada arcu dictum vitae. Sed quam quam, lacinia sed malesuada ac, aliquet non tortor.
+													<br>
+													<br>
+													<?php
+													include 'php/baza.php';
+													?>
+											</div>
 											
 									</div>
 							</div>
