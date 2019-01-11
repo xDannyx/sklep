@@ -24,14 +24,24 @@
   if(isset($_POST['registerbtn']))
   {
   <?php
-                          include 'php/baza.php';
-                          $sql = "INSERT INTO klienci (login, hash_hasla, imie, nazwisko) VALUES ('$login','$psw','$imie','$nazwisko')";
-                          if(mysqli_query($conn, $sql)){
-                          echo "Records inserted successfully.";
-                          } else{
-                          echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-                          }
-  ?>
+  $servername = "mysql.cba.pl";
+  $username = "bazadanychPZ";
+  $password = "123456Pz";
+  $dbname = "tomekandr";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = "INSERT INTO klienci (login, hash_hasla, imie, nazwisko) VALUES ('$login','$psw','$imie','$nazwisko')";
+  
+  $conn->close(); 													
+?> 
+        
+
   }
 
   </div>
