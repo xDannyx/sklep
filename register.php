@@ -13,10 +13,10 @@
     <input type="password" placeholder="Wpisz Haslo" name="psw" required>
 
     <label for="imie"><b>Imie</b></label>
-    <input type="password" placeholder="Wpisz Imie" name="imie" required>
+    <input type="text" placeholder="Wpisz Imie" name="imie" required>
 
     <label for="imie"><b>Nazwisko</b></label>
-    <input type="password" placeholder="Wpisz Nazwisko" name="nazwisko" required>
+    <input type="text" placeholder="Wpisz Nazwisko" name="nazwisko" required>
     <hr>
 
     <button type="submit" class="registerbtn">Rejestruj</button>
