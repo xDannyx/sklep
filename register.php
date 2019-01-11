@@ -19,7 +19,7 @@
     <input type="text" placeholder="Wpisz Nazwisko" name="nazwisko" required>
     <hr>
 
-    <button type="submit" name="registerbtn">Rejestruj</button>
+    <button type="submit" name="registerbtn" class="registerbtn">Rejestruj</button>
   
   <?php
   if(isset($_POST['registerbtn']))
