@@ -21,7 +21,7 @@
 
     <button type="submit" class="registerbtn">Rejestruj</button>
 
-  if(isset($_POST['submit_btn']))
+  if(isset($_POST['registerbtn']))
   {
   <?php
                           include 'php/baza.php';
