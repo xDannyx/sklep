@@ -19,11 +19,12 @@
     <input type="text" placeholder="Wpisz Nazwisko" name="nazwisko" required>
     <hr>
 
-    <button type="submit" class="registerbtn">Rejestruj</button>
-
+    <button type="submit" name="registerbtn">Rejestruj</button>
+  
+  <?php
   if(isset($_POST['registerbtn']))
   {
-  <?php
+ 
   $servername = "mysql.cba.pl";
   $username = "bazadanychPZ";
   $password = "123456Pz";
@@ -39,11 +40,11 @@
   $sql = "INSERT INTO klienci (login, hash_hasla, imie, nazwisko) VALUES ('$login','$psw','$imie','$nazwisko')";
   
   $conn->close(); 													
-?> 
+ 
         
 
   }
-
+  ?>
   </div>
 
   </div>
