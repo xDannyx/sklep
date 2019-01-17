@@ -1,53 +1,45 @@
  <?php
       require('baza.php')
-      if (isset($_POST['login'])){
-        $login = $_POST['login'];
+      if (isset($_POST['username']) && isset($_POST['password'])){
+        $username = $_POST['username'];
 	      $email = $_POST['email'];
-        $password = $_POST['psw'];
-        $imie = $_POST['imie'];
-        $nazwisko =$_POST['nazwisko']
-        [$login],[$psw],[$imie],[$nazwisko]
-        $sql = "INSERT INTO `klienci`(`login`, `hash_hasla`, `imie`, `nazwisko`) VALUES ([$login],[$psw],[$imie],[$nazwisko])";
-        $result = mysqli_query($connection, $sql);
+        $password = $_POST['password'];
+ 
+        $query = "INSERT INTO `klienci` (login, hash_hasla, imie, nazwisko) VALUES ('$username', '$password', '$email','$email')";
+        $result = mysqli_query($connection, $query);
         if($result){
             $smsg = "User Created Successfully.";
         }else{
             $fmsg ="User Registration Failed";
-        }}
+        }
+    }
  ?>
- <form action="action_page.php" method="post">
-  <div class="container">
-  <link rel="stylesheet" type="text/css" href="styles/register.css">
-  <form class="form-signing" method="POST">
-    <h1>Rejestracja</h1>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
-    <hr>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
 
-    <label for="email"><b>Login</b></label>
-    <input type="text" placeholder="Wpisz Login" name="login" required>
+<link rel="stylesheet" href="styles.css" >
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Wpisz Haslo" name="psw" required>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <label for="imie"><b>Imie</b></label>
-    <input type="text" placeholder="Wpisz Imie" name="imie" required>
+</head>
 
-    <label for="imie"><b>Nazwisko</b></label>
-    <input type="text" placeholder="Wpisz Nazwisko" name="nazwisko" required>
-    <hr>
-
-    <button type="submit" name="registerbtn" class="registerbtn">Rejestruj</button>
-  
-
-  
-  
-  $conn->close(); 													
- 
-        
-
-  }
-  ?>
-  </div>
-
-  </div>
-</form> 
+	
+<div class="container">
+      <form class="form-signin" method="POST">
+        <h2 class="form-signin-heading">Please Register</h2>
+        <div class="input-group">
+	  <span class="input-group-addon" id="basic-addon1">@</span>
+	  <input type="text" name="username" class="form-control" placeholder="Username" required>
+	</div>
+        <label for="inputEmail" class="sr-only">imie</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        <a class="btn btn-lg btn-primary btn-block" href="login.php">Login</a>
+      </form>
