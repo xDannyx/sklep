@@ -1,5 +1,5 @@
  <?php
-      require('baza.php');
+      require('php/baza.php');
       if (isset($_POST['username']) && isset($_POST['password'])){
         $username = $_POST['username'];
 	      $email = $_POST['email'];
