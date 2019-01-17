@@ -13,8 +13,8 @@
             $smsg = "User Created Successfully.";
         }else{
             $fmsg ="User Registration Failed";
-        }
- 
+        }}
+ ?>
  <form action="action_page.php" method="post">
   <div class="container">
   <link rel="stylesheet" type="text/css" href="styles/register.css">
@@ -38,21 +38,6 @@
 
     <button type="submit" name="registerbtn" class="registerbtn">Rejestruj</button>
   
-  <?php
-  if(isset($_POST['registerbtn']))
-  {
- 
-  $servername = "mysql.cba.pl";
-  $username = "bazadanychPZ";
-  $password = "123456Pz";
-  $dbname = "tomekandr";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
 
   
   
