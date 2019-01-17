@@ -1,5 +1,5 @@
 <?php
-	$servername = "mysql.cba.pl";
+	  $servername = "mysql.cba.pl";
 		$username = "bazadanychPZ";
 		$password = "123456Pz";
 		$dbname = "tomekandr";
@@ -22,7 +22,7 @@
 
 
 
-    $query = "INSERT INTO `user` (username, password, email) VALUES ('$username2', '$password2', '$email2')";
+    $query = "INSERT INTO `user` (username, password, email) VALUES ('$username2', '$password2', '$email2');
 
 
     if($result){
