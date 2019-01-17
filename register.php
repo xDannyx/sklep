@@ -1,4 +1,4 @@
- <form action="action_page.php">
+ <form action="action_page.php" method="post">
   <div class="container">
   <link rel="stylesheet" type="text/css" href="styles/register.css">
   
@@ -37,7 +37,7 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql = "INSERT INTO klienci (login, hash_hasla, imie, nazwisko) VALUES ('$login','$psw','$imie','$nazwisko')";
+  $sql = "INSERT INTO `klienci`(`login`, `hash_hasla`, `imie`, `nazwisko`) VALUES ([$login],[$psw],[$imie],[$nazwisko])";
   
   $conn->close(); 													
  
