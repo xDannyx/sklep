@@ -1,44 +1,26 @@
 <?php
-	  $servername = "mysql.cba.pl";
-		$username = "bazadanychPZ";
-		$password = "123456Pz";
-		$dbname = "tomekandr";
+$connection =new mysqli('mysql.cba.pl','bazadanychPZ','123456Pz');
+if (!$connection){
+    die("Database Connection Failed" . mysqli_error($connection));
+}
+$select_db = mysqli_select_db($connection,'tomekandr');
+if (!$select_db){
+    die("Database Selection Failed" . mysqli_error($connection));
+}
+if (isset($_POST['username']) && isset($_POST['password'])){
+  $username2 = $_POST['username'];
+$email2 = $_POST['email'];
+  $password2 = $_POST['password'];
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
-
-		
-    if (isset($_POST['username']) && isset($_POST['password'])){
-
-      $username2 = $_POST['username'];
-
-        $email2 = $_POST['email'];
-
-        $password2 = $_POST['password'];
-
-
-
-    $query = "INSERT INTO `user` (username, password, email) VALUES ('$username2', '$password2', '$email2');
-
-
-    if($result){
-
-        $smsg = "User Created Successfully.";
-
-    }else{
-
-        $fmsg ="User Registration Failed";
-
-    }
-		$conn->close(); 			
-
-
- ?>
-
+  $query = "INSERT INTO `user` (username, password, email) VALUES ('$username2', '$password2', '$email2')";
+  $result = mysqli_query($connection, $query);
+  if($result){
+      $smsg = "User Created Successfully.";
+  }else{
+      $fmsg ="User Registration Failed";
+  }
+}
+?>
 
 
  <head>
