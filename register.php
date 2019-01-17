@@ -1,3 +1,26 @@
+<style>
+.container {
+  height: 200px;
+  width: 150px;
+  position: relative;
+
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<div class="container">
+  <div class="center">
+
+  </div>
+</div> 
 <?php
 
 $connection =new mysqli('mysql.cba.pl','bazadanychPZ','123456Pz');
