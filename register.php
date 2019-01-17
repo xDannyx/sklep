@@ -5,7 +5,7 @@
 	      $email = $_POST['email'];
         $password = $_POST['password'];
  
-        $query = "INSERT INTO `klienci` (login, hash_hasla, imie, nazwisko) VALUES ('$username', '$password', '$email','$email')";
+        $query = "INSERT INTO `klienci` (login, hash_hasla, imie) VALUES ('$username', '$password', '$email)";
         $result = mysqli_query($connection, $query);
         if($result){
             $smsg = "User Created Successfully.";
@@ -33,10 +33,9 @@
       <form class="form-signin" method="POST">
         <h2 class="form-signin-heading">Please Register</h2>
         <div class="input-group">
-	  <span class="input-group-addon" id="basic-addon1">@</span>
 	  <input type="text" name="username" class="form-control" placeholder="Username" required>
 	</div>
-        <label for="inputEmail" class="sr-only">imie</label>
+        <label for="inputEmail" class="sr-only">email</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
